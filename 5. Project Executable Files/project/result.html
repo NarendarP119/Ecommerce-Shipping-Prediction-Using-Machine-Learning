@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .container .tick {
+            font-size: 5em;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tick">&#10004;</div>
+        <h1>Prediction Result</h1>
+        <p id="result-text"></p>
+    </div>
+
+    <script>
+        // Retrieve the result from sessionStorage and display it
+        document.getElementById('result-text').innerText = sessionStorage.getItem('predictionResult');
+    </script>
+</body>
+</html>
+
